@@ -13,9 +13,9 @@ import com.api.submitservice.model.TaskDto;
 @FeignClient(name = "SUMISSION-SERVICE", url = "http://localhost:5003/")
 public interface TaskService {
   @GetMapping("/api/tasks/{id}")
-  public ResponseEntity<TaskDto> getTaskById(@PathVariable Long id, @RequestHeader("Authorization") String jwt);
+  public TaskDto getTaskById(@PathVariable Long id, @RequestHeader("Authorization") String jwt);
 
   @PutMapping("api/tasks/{id}/complete")
-  public ResponseEntity<TaskDto> completeTask(@PathVariable Long id) throws Exception;
+  public TaskDto completeTask(@PathVariable Long id) throws Exception;
 
 }

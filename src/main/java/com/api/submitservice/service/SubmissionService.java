@@ -6,7 +6,7 @@ import com.api.submitservice.model.Submission;
 
 public interface SubmissionService {
 
-  Submission submitTask(Long tastId, String githubLink, Long userId) throws Exception;
+  Submission submitTask(Long taskId, String githubLink, Long userId , String jwt) throws Exception;
 
   Submission getTastSubmissionById(Long submissionId) throws Exception;
 
